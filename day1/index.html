@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Indian Oil Corporation Limited - India's flagship national oil company and the largest commercial enterprise. Fuelling a billion dreams since 1959.">
+  <meta name="keywords" content="IOCL, Indian Oil, fuel, petroleum, refinery, LPG, natural gas, energy, India">
+  <meta name="author" content="Indian Oil Corporation Limited">
+
+  <title>Indian Oil Corporation Limited — The Energy of India</title>
+
+  <!-- Favicon (IOCL orange circle) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23F37022'/><rect x='4' y='13' width='24' height='6' rx='1' fill='%2302164F'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ===== 1. TOP UTILITY BAR ===== -->
+  <div class="top-bar" id="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="#careers"><i class="fa fa-user"></i> Careers</a>
+        <a href="#tenders"><i class="fa fa-rupee"></i> Tenders</a>
+        <a href="#investors"><i class="fa fa-line-chart"></i> Investors</a>
+        <a href="#rti"><i class="fa fa-info-circle"></i> RTI</a>
+        <a href="#vigilance"><i class="fa fa-shield"></i> Vigilance</a>
+        <a href="#csr"><i class="fa fa-heart"></i> CSR</a>
+        <a href="#payment"><i class="fa fa-credit-card"></i> Pay Online</a>
+      </div>
+      <div class="top-bar-right">
+        <div class="social-icons-top">
+          <a href="https://twitter.com/IndianOilcl" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/indianoil/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/IndianOilCorpLtd" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.youtube.com/user/IOaborC" target="_blank" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+          <a href="https://www.instagram.com/indianoilcl/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="top-bar-divider"></div>
+        <div class="top-bar-assist">
+          <a href="#hindi"><i class="fa fa-language"></i> हिन्दी</a>
+          <div class="font-controls">
+            <a id="decfont" title="Decrease font size"><i class="fa fa-font" style="font-size:0.65rem"></i>-</a>
+            <a id="incfont" title="Increase font size"><i class="fa fa-font"></i>+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 2. LOGO BANNER (HEADER MIDDLE) ===== -->
+  <div class="header-middle" id="header-middle">
+    <div class="container">
+      <div class="logo-section">
+        <!-- SVG IOCL Logo -->
+        <svg class="logo-img" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="35" fill="#F37022"/>
+          <circle cx="40" cy="40" r="28" fill="#FF9933"/>
+          <circle cx="40" cy="40" r="20" fill="#F37022" opacity="0.4"/>
+          <rect x="5" y="32" width="70" height="16" rx="2" fill="#02164F"/>
+          <text x="40" y="44" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="8" font-weight="700">IndianOil</text>
+        </svg>
+        <div class="logo-text">
+          <h1>Indian Oil Corporation Limited</h1>
+          <span class="tagline"><i class="fa fa-certificate"></i> The Energy of India</span>
+          <span class="hindi-name">इंडियन ऑयल कॉर्पोरेशन लिमिटेड</span>
+        </div>
+      </div>
+      <div class="header-location" onclick="window.open('https://maps.google.com/?q=IndianOil+Bhawan+New+Delhi')" title="Click to view location">
+        <i class="fa fa-map-marker loc-icon"></i>
+        <div class="loc-text">
+          <span>IndianOil Bhawan</span>
+          <p>G-9, Ali Yavar Jung Marg, Bandra (East)</p>
+          <p>Mumbai - 400051, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 3. MAIN NAVIGATION (STICKY) ===== -->
+  <nav class="main-nav" id="main-nav" role="navigation">
+    <div class="container">
+      <a class="nav-brand" href="#">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:auto;">
+          <circle cx="40" cy="40" r="35" fill="#F37022"/>
+          <circle cx="40" cy="40" r="28" fill="#FF9933"/>
+          <rect x="5" y="32" width="70" height="16" rx="2" fill="#02164F"/>
+          <text x="40" y="44" text-anchor="middle" fill="white" font-family="Inter" font-size="8" font-weight="700">IndianOil</text>
+        </svg>
+      </a>
+
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="active"><a href="#" aria-label="Home"><i class="fa fa-home"></i></a></li>
+
+        <!-- Business -->
+        <li>
+          <a href="javascript:void(0)">Business <i class="fa fa-chevron-down caret"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-col">
+                <h4>Refineries</h4>
+                <ul>
+                  <li><a href="#">Gujarat Refinery</a></li>
+                  <li><a href="#">Mathura Refinery</a></li>
+                  <li><a href="#">Panipat Refinery</a></li>
+                  <li><a href="#">Haldia Refinery</a></li>
+                  <li><a href="#">Barauni Refinery</a></li>
+                  <li><a href="#">Digboi Refinery</a></li>
+                  <li><a href="#">Bongaigaon Refinery</a></li>
+                  <li><a href="#">Paradip Refinery</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>Pipelines</h4>
+                <ul>
+                  <li><a href="#">Crude Oil Pipelines</a></li>
+                  <li><a href="#">Product Pipelines</a></li>
+                  <li><a href="#">Gas Pipelines</a></li>
+                  <li><a href="#">Cross-Country Pipelines</a></li>
+                  <li><a href="#">Pipeline Network Map</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>Marketing</h4>
+                <ul>
+                  <li><a href="#">Retail Fuel Outlets</a></li>
+                  <li><a href="#">LPG (Indane)</a></li>
+                  <li><a href="#">Lubricants (SERVO)</a></li>
+                  <li><a href="#">Aviation Fuel</a></li>
+                  <li><a href="#">Industrial & Bulk</a></li>
+                  <li><a href="#">Natural Gas</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>Petrochemicals</h4>
+                <ul>
+                  <li><a href="#">Polymers</a></li>
+                  <li><a href="#">Naphtha Cracker</a></li>
+                  <li><a href="#">Aromatics</a></li>
+                  <li><a href="#">PTA/PX Complex</a></li>
+                  <li><a href="#">Specialty Products</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Products & Services -->
+        <li>
+          <a href="javascript:void(0)">Products & Services <i class="fa fa-chevron-down caret"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-col">
+                <h4>For Consumers</h4>
+                <ul>
+                  <li><a href="#">Petrol & Diesel</a></li>
+                  <li><a href="#">XtraPremium Petrol</a></li>
+                  <li><a href="#">XtraGreen Diesel</a></li>
+                  <li><a href="#">Indane LPG Gas</a></li>
+                  <li><a href="#">SERVO Lubricants</a></li>
+                  <li><a href="#">Auto LPG</a></li>
+                  <li><a href="#">CNG</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>For Industries</h4>
+                <ul>
+                  <li><a href="#">Aviation Turbine Fuel</a></li>
+                  <li><a href="#">Marine Fuels</a></li>
+                  <li><a href="#">Bitumen</a></li>
+                  <li><a href="#">Petroleum Coke</a></li>
+                  <li><a href="#">Industrial Solvents</a></li>
+                  <li><a href="#">Bulk Fuel Supply</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>Digital Services</h4>
+                <ul>
+                  <li><a href="#">IndianOil ONE App</a></li>
+                  <li><a href="#">ePay</a></li>
+                  <li><a href="#">Dealer Locator</a></li>
+                  <li><a href="#">LPG Booking</a></li>
+                  <li><a href="#">Fleet Card</a></li>
+                  <li><a href="#">XSPARK Loyalty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Sustainability -->
+        <li>
+          <a href="javascript:void(0)">Sustainability <i class="fa fa-chevron-down caret"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Green Energy Initiatives</a></li>
+            <li><a href="#">Hydrogen Mission</a></li>
+            <li><a href="#">Solar & Wind Projects</a></li>
+            <li><a href="#">EV Charging Stations</a></li>
+            <li><a href="#">Carbon Neutrality Goals</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">ESG Performance</a></li>
+          </ul>
+        </li>
+
+        <!-- Media -->
+        <li>
+          <a href="javascript:void(0)">Media <i class="fa fa-chevron-down caret"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Press Releases</a></li>
+            <li><a href="#">News & Updates</a></li>
+            <li><a href="#">Media Gallery</a></li>
+            <li><a href="#">Advertisements</a></li>
+            <li><a href="#">Brand Guidelines</a></li>
+            <li><a href="#">IndianOil Newsletter</a></li>
+          </ul>
+        </li>
+
+        <!-- About Us -->
+        <li>
+          <a href="javascript:void(0)">About Us <i class="fa fa-chevron-down caret"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-col">
+                <h4>Organization</h4>
+                <ul>
+                  <li><a href="#">Our History</a></li>
+                  <li><a href="#">Vision & Mission</a></li>
+                  <li><a href="#">Board of Directors</a></li>
+                  <li><a href="#">Management Team</a></li>
+                  <li><a href="#">Organization Chart</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>Performance</h4>
+                <ul>
+                  <li><a href="#">Annual Report</a></li>
+                  <li><a href="#">Financial Results</a></li>
+                  <li><a href="#">Awards & Accolades</a></li>
+                  <li><a href="#">Rankings</a></li>
+                  <li><a href="#">MoU Targets</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-col">
+                <h4>R&D</h4>
+                <ul>
+                  <li><a href="#">R&D Centre, Faridabad</a></li>
+                  <li><a href="#">Research Areas</a></li>
+                  <li><a href="#">Patents & Publications</a></li>
+                  <li><a href="#">Collaborations</a></li>
+                  <li><a href="#">Innovation Hub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Investors -->
+        <li>
+          <a href="javascript:void(0)">Investors <i class="fa fa-chevron-down caret"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Share Price</a></li>
+            <li><a href="#">Quarterly Results</a></li>
+            <li><a href="#">Annual Report</a></li>
+            <li><a href="#">Dividend History</a></li>
+            <li><a href="#">Investor Presentations</a></li>
+            <li><a href="#">Corporate Governance</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav-search">
+        <a href="#" aria-label="Search" title="Quick Search"><i class="fa fa-search"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main role="main">
+
+    <!-- ===== 4. HERO SLIDER ===== -->
+    <section class="hero-slider" id="home" aria-label="Hero Slider">
+      <div class="hero-slides">
+        <!-- Slide 1 -->
+        <div class="hero-slide">
+          <img src="images/hero-refinery.png" alt="IOCL Refinery at sunset">
+          <div class="overlay"></div>
+          <div class="content">
+            <h2>Fuelling India's Growth</h2>
+            <p>India's flagship national oil company powering the nation's energy needs with world-class refining and distribution infrastructure.</p>
+            <a href="#about" class="hero-btn">Discover More</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <img src="images/hero-fuelstation.png" alt="Modern IndianOil fuel station">
+          <div class="overlay"></div>
+          <div class="content">
+            <h2>35,000+ Fuel Stations Nationwide</h2>
+            <p>Serving millions of customers every day through India's largest retail network of fuel stations.</p>
+            <a href="#stations" class="hero-btn">Find a Station</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <img src="images/hero-research.png" alt="IndianOil R&D Centre">
+          <div class="overlay"></div>
+          <div class="content">
+            <h2>Innovation for Tomorrow</h2>
+            <p>Pioneering research in green hydrogen, biofuels, and next-generation energy technologies at our state-of-the-art R&D Centre.</p>
+            <a href="#research" class="hero-btn">Explore R&D</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="slider-arrows">
+        <div class="slider-arrow prev"><i class="fa fa-chevron-left"></i></div>
+        <div class="slider-arrow next"><i class="fa fa-chevron-right"></i></div>
+      </div>
+      <div class="slider-controls">
+        <div class="slider-dot active" data-slide="0"></div>
+        <div class="slider-dot" data-slide="1"></div>
+        <div class="slider-dot" data-slide="2"></div>
+      </div>
+
+      <!-- Hero Bottom Cards (like IITD's overlay cards) -->
+      <div class="hero-cards">
+        <div class="hero-card">
+          <i class="fa fa-industry"></i>
+          <h4>Refinery Operations</h4>
+          <p>11 refineries across India</p>
+        </div>
+        <div class="hero-card">
+          <i class="fa fa-car"></i>
+          <h4>Fuel Stations</h4>
+          <p>India's largest network</p>
+        </div>
+        <div class="hero-card">
+          <i class="fa fa-flask"></i>
+          <h4>R&D Centre</h4>
+          <p>Pioneering energy research</p>
+        </div>
+        <div class="hero-card">
+          <i class="fa fa-globe"></i>
+          <h4>Global Presence</h4>
+          <p>Operations in 20+ countries</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. ANNOUNCEMENTS SECTION ===== -->
+    <section class="announcements-section" id="announcements">
+      <div class="container">
+        <div class="announcements-grid fade-in">
+          <!-- Featured Banner -->
+          <div class="featured-banner">
+            <span class="badge">Featured Report</span>
+            <h3>Annual Report 2024-25</h3>
+            <p>Read about IndianOil's transformative journey — from record refining throughput to pioneering green hydrogen and EV initiatives. The Energy of India, powering a sustainable tomorrow.</p>
+            <a href="#" class="btn-read">Read Annual Report <i class="fa fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Announcement List -->
+          <div class="announcement-list">
+            <div class="announcement-list-header">
+              <h3><i class="fa fa-bullhorn"></i> Important Announcements</h3>
+              <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="announcement-items">
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">20</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Tender</span>
+                  <h4>E-Tender for supply of High Speed Diesel at various locations in Northern Region</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">18</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Recruitment</span>
+                  <h4>Recruitment of Apprentices under Apprentices Act 1961 — 2025-26 Batch</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">15</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Notice</span>
+                  <h4>Board Meeting for Q1 FY26 Unaudited Financial Results scheduled for July 2025</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">12</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">CSR</span>
+                  <h4>IndianOil Foundation launches 'Swachh Vidyalaya' initiative across 5 states</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">10</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Operations</span>
+                  <h4>Paradip Refinery achieves highest-ever crude throughput of 18.5 MMTPA</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">08</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Sustainability</span>
+                  <h4>IndianOil commissions 1 GW solar power capacity across refinery rooftops</h4>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <div class="date-badge">
+                  <span class="day">05</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="ann-content">
+                  <span class="ann-tag">Partnership</span>
+                  <h4>MoU signed with NTPC for Green Hydrogen production at Mathura Refinery</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. NEWS + EVENTS SECTION ===== -->
+    <section class="news-events-section" id="news-events">
+      <div class="container">
+        <div class="news-events-grid">
+          <!-- News Column -->
+          <div class="news-column fade-in">
+            <div class="section-title-bar"></div>
+            <h3>Latest News</h3>
+            <p class="section-subtitle">Stay updated with IndianOil's latest developments</p>
+            <div class="news-cards">
+              <div class="news-card">
+                <div class="card-img">
+                  <img src="images/hero-refinery.png" alt="Refinery news">
+                  <span class="card-date">Jun 19, 2025</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag">Expansion</span>
+                  <h4>Gujarat Refinery capacity expansion to 18 MMTPA approved by Board</h4>
+                  <p>The expansion project will make it one of the largest refining complexes in Asia...</p>
+                </div>
+              </div>
+              <div class="news-card">
+                <div class="card-img">
+                  <img src="images/hero-fuelstation.png" alt="Fuel station">
+                  <span class="card-date">Jun 16, 2025</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag">Retail</span>
+                  <h4>IndianOil crosses 35,000 retail outlet milestone across India</h4>
+                  <p>The company continues to expand its retail network in tier-2 and tier-3 cities...</p>
+                </div>
+              </div>
+              <div class="news-card">
+                <div class="card-img">
+                  <img src="images/hero-research.png" alt="R&D Centre">
+                  <span class="card-date">Jun 12, 2025</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag">Innovation</span>
+                  <h4>R&D Centre develops indigenous catalyst for petroleum refining</h4>
+                  <p>The breakthrough catalyst technology reduces import dependency and saves ₹500 Cr annually...</p>
+                </div>
+              </div>
+              <div class="news-card">
+                <div class="card-img">
+                  <img src="images/hero-refinery.png" alt="Awards">
+                  <span class="card-date">Jun 8, 2025</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag">Recognition</span>
+                  <h4>IndianOil ranked #1 Indian company in Fortune Global 500 list</h4>
+                  <p>For the 29th consecutive year, IndianOil features among the world's largest companies...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events Column -->
+          <div class="events-column fade-in">
+            <div class="section-title-bar"></div>
+            <h3>Upcoming Events</h3>
+            <p class="section-subtitle">Conferences, exhibitions & stakeholder meets</p>
+            <div class="events-list">
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">28</span>
+                  <span class="e-month">Jun</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>IndianOil Annual General Meeting 2025</h4>
+                  <p><i class="fa fa-map-marker"></i> IndianOil Bhawan, Mumbai</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">05</span>
+                  <span class="e-month">Jul</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>Petrotech 2025 — International Oil & Gas Conference</h4>
+                  <p><i class="fa fa-map-marker"></i> Greater Noida, India</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">12</span>
+                  <span class="e-month">Jul</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>Green Hydrogen Summit — Towards Net Zero</h4>
+                  <p><i class="fa fa-map-marker"></i> R&D Centre, Faridabad</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">20</span>
+                  <span class="e-month">Jul</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>IndianOil Stakeholders Meet — Eastern Region</h4>
+                  <p><i class="fa fa-map-marker"></i> Kolkata, West Bengal</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">02</span>
+                  <span class="e-month">Aug</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>SERVO Lubricants — Dealer Convention 2025</h4>
+                  <p><i class="fa fa-map-marker"></i> Jaipur, Rajasthan</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="e-day">15</span>
+                  <span class="e-month">Aug</span>
+                  <span class="e-year">2025</span>
+                </div>
+                <div class="event-info">
+                  <h4>Independence Day Celebrations across all locations</h4>
+                  <p><i class="fa fa-map-marker"></i> Pan India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. STATISTICS COUNTER SECTION ===== -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid fade-in">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa fa-users"></i></div>
+            <div class="stat-number"><span class="count" data-target="33000">0</span><span class="suffix">+</span></div>
+            <div class="stat-label">Employees Nationwide</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa fa-building"></i></div>
+            <div class="stat-number"><span class="count" data-target="11">0</span></div>
+            <div class="stat-label">Refineries Across India</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa fa-car"></i></div>
+            <div class="stat-number"><span class="count" data-target="35000">0</span><span class="suffix">+</span></div>
+            <div class="stat-label">Fuel Stations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa fa-road"></i></div>
+            <div class="stat-number"><span class="count" data-target="18000">0</span><span class="suffix"> km</span></div>
+            <div class="stat-label">Pipeline Network</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. DIVISIONS / QUICK LINKS SECTION ===== -->
+    <section class="divisions-section" id="divisions">
+      <div class="container">
+        <div class="section-title-bar fade-in"></div>
+        <h2 class="section-title fade-in">Our Business Divisions</h2>
+        <p class="section-subtitle fade-in">Explore the pillars that power India's energy infrastructure</p>
+        <div class="divisions-grid">
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-industry"></i></div>
+            <div>
+              <h4>Refineries Division</h4>
+              <p>80.7 MMTPA refining capacity</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-exchange"></i></div>
+            <div>
+              <h4>Pipelines Division</h4>
+              <p>Crude & product transportation</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-shopping-cart"></i></div>
+            <div>
+              <h4>Marketing Division</h4>
+              <p>Retail, LPG & bulk sales</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-flask"></i></div>
+            <div>
+              <h4>R&D Centre</h4>
+              <p>Asia's finest energy lab</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-cube"></i></div>
+            <div>
+              <h4>Petrochemicals</h4>
+              <p>Polymers & specialty chemicals</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-fire"></i></div>
+            <div>
+              <h4>Natural Gas</h4>
+              <p>CGD & city gas distribution</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-leaf"></i></div>
+            <div>
+              <h4>Alternative Energy</h4>
+              <p>Solar, wind, hydrogen & EV</p>
+            </div>
+          </div>
+          <div class="division-card fade-in">
+            <div class="div-icon"><i class="fa fa-globe"></i></div>
+            <div>
+              <h4>International Operations</h4>
+              <p>Presence in 20+ countries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 9. FOOTER ===== -->
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: About -->
+        <div class="footer-col footer-about">
+          <div class="footer-logo">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:45px;width:auto;flex-shrink:0;">
+              <circle cx="40" cy="40" r="35" fill="#F37022"/>
+              <circle cx="40" cy="40" r="28" fill="#FF9933"/>
+              <rect x="5" y="32" width="70" height="16" rx="2" fill="#02164F"/>
+              <text x="40" y="44" text-anchor="middle" fill="white" font-family="Inter" font-size="8" font-weight="700">IndianOil</text>
+            </svg>
+            <span>IndianOil</span>
+          </div>
+          <p>India's flagship Maharatna national oil company and the highest ranked Indian corporate in the Fortune 'Global 500' listing.</p>
+          <div class="footer-contact">
+            <a href="tel:+911800-2000"><i class="fa fa-phone"></i> 1800-2000-456 (Toll Free)</a>
+            <a href="mailto:customercare@indianoil.in"><i class="fa fa-envelope"></i> customercare@indianoil.in</a>
+            <a href="#"><i class="fa fa-map-marker"></i> IndianOil Bhawan, Mumbai</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Refineries</a></li>
+            <li><a href="#">Pipelines</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Petrochemicals</a></li>
+            <li><a href="#">R&D Centre</a></li>
+            <li><a href="#">International Ops</a></li>
+            <li><a href="#">Subsidiaries</a></li>
+            <li><a href="#">Joint Ventures</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Explore -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">CSR Activities</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Tenders</a></li>
+            <li><a href="#">Vigilance</a></li>
+            <li><a href="#">RTI</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Certifications -->
+        <div class="footer-col">
+          <h4>Certifications</h4>
+          <div class="footer-certifications">
+            <div class="cert-badge"><i class="fa fa-check-circle"></i> ISO 9001:2015</div>
+            <div class="cert-badge"><i class="fa fa-check-circle"></i> ISO 14001:2015</div>
+            <div class="cert-badge"><i class="fa fa-check-circle"></i> ISO 45001:2018</div>
+            <div class="cert-badge"><i class="fa fa-check-circle"></i> SA 8000:2014</div>
+            <div class="cert-badge"><i class="fa fa-check-circle"></i> ISO 50001:2018</div>
+          </div>
+          <h4 style="margin-top:24px;">Investor Info</h4>
+          <ul>
+            <li><a href="#">BSE: 530965</a></li>
+            <li><a href="#">NSE: IOC</a></li>
+            <li><a href="#">Annual Report</a></li>
+            <li><a href="#">Dividend History</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <span>© 2025 Indian Oil Corporation Limited. All Rights Reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
