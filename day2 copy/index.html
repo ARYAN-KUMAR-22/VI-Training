@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barauni Refinery Intranet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <nav class="utility-links" aria-label="Utility links">
+          <a href="#">Jobs</a>
+          <a href="#events">Calendar</a>
+          <a href="#">Tenders</a>
+          <a href="#">Payment Gateway</a>
+          <a href="#">Recruiters/Careers</a>
+          <a href="#">ICC</a>
+        </nav>
+        <div class="utility-tools">
+          <button class="text-size" type="button" aria-label="Decrease text">-</button>
+          <button class="text-size" type="button" aria-label="Increase text">+</button>
+          <select id="languageSelect" aria-label="Select language">
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
+          <a href="#">IOCL Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="identity-band">
+      <div class="container identity-inner">
+        <a class="brand-lockup" href="#home" aria-label="Barauni Refinery Intranet home">
+          <span class="brand-seal">IO</span>
+          <span>
+            <strong>IndianOil</strong>
+            <small>The Energy of India</small>
+          </span>
+        </a>
+
+        <div class="institute-title">
+          <h1>Barauni Refinery</h1>
+          <p>In Harmony with Nature</p>
+          <span>Internal Intranet Portal</span>
+        </div>
+
+        <div class="date-box" aria-live="polite">
+          <strong id="dayName">Tuesday</strong>
+          <span id="fullDate">23 June 2026</span>
+          <small id="liveTime">1:10:36 pm</small>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <div class="nav-item">
+          <button class="nav-button is-active" type="button" data-menu="homeMenu">Home</button>
+          <div class="nav-menu" id="homeMenu">
+            <a href="#home">Home Page</a>
+            <a href="#announcements">Important Announcements</a>
+            <a href="#events">Calendar</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-button" type="button" data-menu="academicsMenu">Intranet Links</button>
+          <div class="nav-menu mega-menu" id="academicsMenu">
+            <div>
+              <h2>Departments</h2>
+              <a href="#">Administration</a>
+              <a href="#">Accounts</a>
+              <a href="#">Human Resources</a>
+              <a href="#">Information Technology</a>
+            </div>
+            <div>
+              <h2>Facilities</h2>
+              <a href="#">Fire and Safety</a>
+              <a href="#">Security</a>
+              <a href="#">Procurement</a>
+              <a href="#">Maintenance</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-button" type="button" data-menu="studentsMenu">Applications</button>
+          <div class="nav-menu" id="studentsMenu">
+            <a href="#applications">ESS</a>
+            <a href="#applications">UAS</a>
+            <a href="#applications">e-Nivida</a>
+            <a href="#applications">Vehicle Gate Pass</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-button" type="button" data-menu="facultyMenu">BR Specific</button>
+          <div class="nav-menu" id="facultyMenu">
+            <a href="#dashboards">GRM Day</a>
+            <a href="#dashboards">Crude T/Put</a>
+            <a href="#dashboards">Dist Yield</a>
+            <a href="#dashboards">Operational Availability</a>
+          </div>
+        </div>
+        <a class="nav-direct" href="#announcements">News</a>
+        <a class="nav-direct" href="#resources">Resources</a>
+        <a class="nav-direct" href="#contacts">Contact</a>
+
+        <form class="site-search" id="siteSearch" role="search">
+          <label class="sr-only" for="searchInput">Search resources</label>
+          <input id="searchInput" type="search" placeholder="Search">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero-slider" aria-label="Featured intranet highlights">
+      <article class="hero-slide is-active" data-slide="0">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=80" alt="Industrial refinery infrastructure">
+        <div class="hero-caption">
+          <p>Welcome to</p>
+          <h2>Barauni Refinery Intranet</h2>
+          <a href="#about">Know More</a>
+        </div>
+      </article>
+      <article class="hero-slide" data-slide="1">
+        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df7b?auto=format&fit=crop&w=1800&q=80" alt="Safety equipment and refinery work setting">
+        <div class="hero-caption">
+          <p>Safety First</p>
+          <h2>PPE Compliance Inside Refinery Premises</h2>
+          <a href="#dashboards">Know More</a>
+        </div>
+      </article>
+      <article class="hero-slide" data-slide="2">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80" alt="Office collaboration and digital services">
+        <div class="hero-caption">
+          <p>Internal Services</p>
+          <h2>Applications, Events, Manuals and Forms</h2>
+          <a href="#applications">Know More</a>
+        </div>
+      </article>
+      <div class="hero-controls">
+        <button class="hero-dot is-active" type="button" data-slide-target="0" aria-label="Show welcome slide"></button>
+        <button class="hero-dot" type="button" data-slide-target="1" aria-label="Show safety slide"></button>
+        <button class="hero-dot" type="button" data-slide-target="2" aria-label="Show services slide"></button>
+      </div>
+    </section>
+
+    <section class="highlight-band" aria-label="Homepage highlights">
+      <a href="#dashboards">
+        <strong>GRM</strong>
+        <span>Daily refinery dashboard</span>
+      </a>
+      <a href="#applications">
+        <strong>Applications</strong>
+        <span>ESS, UAS, e-Nivida and more</span>
+      </a>
+      <a href="#announcements">
+        <strong>News</strong>
+        <span>Important refinery updates</span>
+      </a>
+      <a href="#events">
+        <strong>Events</strong>
+        <span>Holiday and meeting schedule</span>
+      </a>
+    </section>
+
+    <section class="notice-ticker" aria-label="Important ticker">
+      <div class="container notice-ticker-inner">
+        <strong>Notice</strong>
+        <div class="ticker-window">
+          <div class="ticker-track" id="tickerTrack">
+            <span>Barauni Refinery accredited with ISO-14001.</span>
+            <span>15-Aug-2026: Holiday for Independence Day.</span>
+            <span>Meeting Schedule: RSM on 23-Jun-2026 at 11:00.</span>
+            <span>Safety PPE compliance is mandatory for refinery entry.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="announcements">
+      <div class="container">
+        <div class="section-title centered">
+          <h2>Important Announcements</h2>
+        </div>
+        <div class="announcement-main">
+          <ul class="announcement-list" id="newsList">
+            <li><a href="#">Research Impact Report style operational impact summary for Barauni Refinery.</a></li>
+            <li><a href="#">Notice regarding refinery safety compliance and PPE entry requirement.</a></li>
+            <li><a href="#">Special circular for upcoming RSM meeting schedule on 23-Jun-2026.</a></li>
+            <li><a href="#">Updated employee self-service forms and internal workflow references.</a></li>
+            <li><a href="#">Expression of interest and procurement related refinery resources.</a></li>
+          </ul>
+          <div style="text-align: center; margin-top: 24px;">
+            <button class="read-more" type="button" id="viewNewsDetails">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="leadership">
+      <div class="container" style="max-width: 800px;">
+        <aside class="director-card">
+          <h2>ED &amp; Ref Head</h2>
+          <div class="director-photo">ED</div>
+          <strong>Executive Director</strong>
+          <p>Leadership updates, refinery messages and important administrative communication.</p>
+          <a href="#">Read more</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-light about-grid" id="about">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-title centered">
+          <h2>About Barauni Refinery</h2>
+        </div>
+        <article class="about-card" style="text-align: center;">
+          <p>Barauni Refinery intranet is the internal gateway for refinery employees to access notices, applications, operational reports, calendars, circulars and service resources.</p>
+          <a href="#">Read more</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-title centered">
+          <h2>Upcoming Events</h2>
+        </div>
+        <article class="about-card">
+          <div class="event-columns" style="text-align: center;">
+            <div>
+              <a href="#">Holiday</a>
+              <p>15-Aug-2026 [Independence Day]</p>
+            </div>
+            <div>
+              <a href="#">View Monthly Calendar</a>
+              <strong>Meeting Schedule</strong>
+              <p>RSM<br>[23-Jun-2026 11:00]</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-light units-section" id="resources">
+      <div class="container">
+        <div class="section-title centered">
+          <h2>Internal Units</h2>
+        </div>
+        <div class="unit-grid">
+          <a href="#">Administration</a>
+          <a href="#">Accounts</a>
+          <a href="#">Human Resources</a>
+          <a href="#">Information Technology</a>
+          <a href="#">Fire and Safety</a>
+          <a href="#">Procurement</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboards">
+      <div class="container dashboard-card">
+        <div class="section-title">
+          <h2>Refinery Dashboard</h2>
+        </div>
+        <div class="tab-list" role="tablist" aria-label="Dashboard tabs">
+          <button class="tab-button is-active" type="button" data-tab="tabHome">Home</button>
+          <button class="tab-button" type="button" data-tab="tabGrm">GRM (Day)</button>
+          <button class="tab-button" type="button" data-tab="tabCrude">Crude T/Put</button>
+          <button class="tab-button" type="button" data-tab="tabDist">Dist Yield</button>
+          <button class="tab-button" type="button" data-tab="tabOps">Operational Availability</button>
+          <button class="tab-button" type="button" data-tab="tabWater">SP. Water Consumption</button>
+        </div>
+        <div class="tab-panel is-active" id="tabHome">
+          <h3>Safety PPE Reminder</h3>
+          <p>Helmet, safety shoes, hand gloves, earplug, dust mask, safety glass and face shield must be carried as per requirement.</p>
+          <div class="safety-grid">
+            <span>Helmet</span>
+            <span>Safety Shoe</span>
+            <span>Hand Gloves</span>
+            <span>Earplug</span>
+            <span>Dust Mask</span>
+            <span>Safety Glass</span>
+            <span>Face Shield</span>
+          </div>
+        </div>
+        <div class="tab-panel" id="tabGrm">
+          <h3>GRM (Day)</h3>
+          <p>Daily GRM dashboard placeholder. Original report links can be attached here.</p>
+        </div>
+        <div class="tab-panel" id="tabCrude">
+          <h3>Crude T/Put</h3>
+          <p>Crude throughput summary and refinery reporting links.</p>
+        </div>
+        <div class="tab-panel" id="tabDist">
+          <h3>Distillate Yield</h3>
+          <p>Distillate yield indicators and day-wise refinery values.</p>
+        </div>
+        <div class="tab-panel" id="tabOps">
+          <h3>Operational Availability</h3>
+          <p>Operational availability dashboard for refinery teams.</p>
+        </div>
+        <div class="tab-panel" id="tabWater">
+          <h3>SP. Water Consumption</h3>
+          <p>Water consumption monitoring and conservation summary.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section section-light" id="applications">
+      <div class="container">
+        <div class="apps-card">
+          <div class="section-title centered">
+            <h2>Applications</h2>
+          </div>
+          <div class="app-carousel">
+            <button class="app-arrow" type="button" id="prevApp" aria-label="Previous applications">&lt;</button>
+            <div class="app-window">
+              <div class="app-track" id="appTrack">
+                <a class="app-tile" href="#"><span>eN</span>e-Nivida</a>
+                <a class="app-tile" href="#"><span>HI</span>Hello IOCian</a>
+                <a class="app-tile" href="#"><span>PP</span>Online PPE Portal</a>
+                <a class="app-tile" href="#"><span>VG</span>Vehicle Gate Pass</a>
+                <a class="app-tile" href="#"><span>ES</span>ESS</a>
+                <a class="app-tile" href="#"><span>UA</span>UAS</a>
+              </div>
+            </div>
+            <button class="app-arrow" type="button" id="nextApp" aria-label="Next applications">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="special-events">
+      <div class="container" style="max-width: 800px;">
+        <aside class="special-card">
+          <div class="section-title centered">
+            <h2>Special Events</h2>
+          </div>
+          <div class="mini-tabs" role="tablist" aria-label="Special events" style="justify-content: center;">
+            <button class="mini-tab is-active" type="button" data-special="birthday">Birthday</button>
+            <button class="mini-tab" type="button" data-special="superannuation">Super Annuation</button>
+            <button class="mini-tab" type="button" data-special="joining">New Joining</button>
+          </div>
+          <div class="special-panel is-active" id="birthday" style="max-width: 400px; margin: 0 auto;">
+            <div class="event-graphic">BD</div>
+            <p>Chandra, Chuneshwar Singh<br>ELE</p>
+            <small>30-Jun</small>
+          </div>
+          <div class="special-panel" id="superannuation" style="max-width: 400px; margin: 0 auto; text-align: center;">
+            <p>No superannuation event listed today.</p>
+          </div>
+          <div class="special-panel" id="joining" style="max-width: 400px; margin: 0 auto; text-align: center;">
+            <p>Welcome updates will appear here.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container footer-layout">
+      <div>
+        <h2>Barauni Refinery Intranet</h2>
+        <p>Internal gateway for applications, notices, events, dashboards and employee resources.</p>
+      </div>
+      <div>
+        <h3>Quick Access</h3>
+        <a href="#">Manuals</a>
+        <a href="#">e-FORMS</a>
+        <a href="#">Circulars</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <p>For intranet access and service desk support, contact IT Helpdesk.</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="news-dialog" id="newsDialog">
+    <button class="dialog-close" type="button" id="closeNewsDialog" aria-label="Close">x</button>
+    <h2>Important Announcements</h2>
+    <p>Current intranet announcements include refinery safety compliance, RSM meeting schedule, employee service forms and internal operational summaries.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

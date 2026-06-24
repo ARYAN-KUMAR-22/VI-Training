@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barauni Refinery Intranet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/indian_oil_logo.png" alt="IndianOil Logo" height="50">
+        </div>
+        <div class="title-container">
+            <h1>Barauni Refinery</h1>
+            <p class="subtitle"><i class="fa-solid fa-leaf"></i> IN HARMONY WITH NATURE <i class="fa-solid fa-leaf"></i></p>
+        </div>
+        <div class="date-time" id="datetime">
+            <!-- Populated by JS -->
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            <li class="active dropdown"><a href="#">Home <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">My Profile</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Intranet Links <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">HR Dept</a></li>
+                    <li><a href="#">IT Helpdesk</a></li>
+                    <li><a href="#">Finance</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Applications <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">ESS</a></li>
+                    <li><a href="#">SAP</a></li>
+                    <li><a href="#">e-Nivida</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">BR Specific <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Township</a></li>
+                    <li><a href="#">Hospital</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Other Links <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Holidays 2026</a></li>
+                    <li><a href="#">Telephone Dir</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">e-FORMS <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Leave Application</a></li>
+                    <li><a href="#">Asset Request</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Quick Links <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Webmail</a></li>
+                    <li><a href="#">LMS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">Manuals <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Safety Manual</a></li>
+                    <li><a href="#">Operations</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+    </nav>
+    
+    <div class="sub-nav">
+        <div class="stats">
+            Fire Free Days: <strong>2977</strong> , Accident Free Days: <strong>190</strong>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search resources..." style="padding: 4px 10px; border: none; border-radius: 4px; background-color: #0d47a1; color: white;">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="dashboard-grid">
+        <!-- Left Column -->
+        <aside class="left-col">
+            <div class="card profile-card">
+                <div class="card-content">
+                    <img src="assets/ed_head.png" alt="ED Head" class="profile-img" style="border-radius: 5px; width: 100%; height: auto; object-fit: cover; aspect-ratio: 1/1;">
+                    <h3 style="color: #0d47a1; font-size: 1.1rem; margin-top: 10px;">ED & Ref Head</h3>
+                </div>
+            </div>
+            
+            <div class="card gallery-card">
+                <div class="card-header bg-blue text-white text-center">
+                    <h3>BR Gallery</h3>
+                </div>
+                <div class="card-content" style="padding: 0;">
+                    <img src="assets/br_gallery.png" alt="Refinery" style="width: 100%; display: block;">
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <div class="card-header bg-light">
+                    <h3 style="font-size: 0.9rem; margin: 0;">In This Month !! Jun-1997</h3>
+                </div>
+                <div class="card-content">
+                    <p style="font-size: 0.9rem;">Barauni Refinery accredited with ISO-14001</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Column -->
+        <section class="center-col">
+            <div class="card main-content-card">
+                <div class="tabs center-tabs">
+                    <button class="tab active" data-target="tab-home">Home</button>
+                    <button class="tab" data-target="tab-grn">GRN (Day)</button>
+                    <button class="tab" data-target="tab-crude">Crude T/Put</button>
+                    <button class="tab" data-target="tab-dist">Dist Yield</button>
+                    <button class="tab" data-target="tab-eii">EII</button>
+                    <button class="tab" data-target="tab-grm">GRM</button>
+                </div>
+                
+                <div class="tab-content-container">
+                    <!-- Home Tab: Slider -->
+                    <div id="tab-home" class="tab-pane active">
+                        <div class="slider-container">
+                            <div class="slides">
+                                <div class="slide" style="background: url('assets/sprint_slider.png') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                                    <h2 style="color: #006064; font-size: 3.5rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); font-style: italic;">SPRINT</h2>
+                                    <p style="color: #00838f; font-size: 1.2rem; font-weight: bold; background: white; padding: 5px 20px; border-radius: 20px; margin-top: 10px;">A Transformational Project</p>
+                                    <div style="margin-top: 20px; text-align: left; color: #004d40; font-weight: 500;">
+                                        <p><span style="color: #e65100; font-weight: bold;">S</span>trengthen Core Businesses</p>
+                                        <p><span style="color: #e65100; font-weight: bold;">P</span>ropel Cost Optimization</p>
+                                        <p><span style="color: #e65100; font-weight: bold;">R</span>einforce Customer Centricity</p>
+                                        <p><span style="color: #e65100; font-weight: bold;">I</span>ntegrate Technology & Innovation</p>
+                                    </div>
+                                </div>
+                                <div class="slide" style="background: linear-gradient(135deg, #fff3e0, #ffcc80); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                                    <h2 style="color: #e65100; font-size: 3rem; margin: 0;">INNOVATION</h2>
+                                    <p style="color: #ef6c00; font-size: 1.2rem;">Leading the Future</p>
+                                </div>
+                                <div class="slide" style="background: linear-gradient(135deg, #e8f5e9, #a5d6a7); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                                    <h2 style="color: #1b5e20; font-size: 3rem; margin: 0;">SUSTAINABILITY</h2>
+                                    <p style="color: #2e7d32; font-size: 1.2rem;">Green Energy Initiatives</p>
+                                </div>
+                            </div>
+                            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Other Tabs -->
+                    <div id="tab-grn" class="tab-pane" style="display: none; padding: 30px; text-align: center;">
+                        <h3 style="color: #1976d2;">GRN (Day) Data</h3>
+                        <p style="margin-top: 15px; color: #555;">Daily production GRN details will be displayed here.</p>
+                        <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                            <tr style="background: #f1f1f1;"><th style="padding: 8px; border: 1px solid #ddd;">Unit</th><th style="padding: 8px; border: 1px solid #ddd;">Target</th><th style="padding: 8px; border: 1px solid #ddd;">Actual</th></tr>
+                            <tr><td style="padding: 8px; border: 1px solid #ddd;">AVU-1</td><td style="padding: 8px; border: 1px solid #ddd;">1500</td><td style="padding: 8px; border: 1px solid #ddd;">1520</td></tr>
+                            <tr><td style="padding: 8px; border: 1px solid #ddd;">AVU-2</td><td style="padding: 8px; border: 1px solid #ddd;">2000</td><td style="padding: 8px; border: 1px solid #ddd;">1980</td></tr>
+                        </table>
+                    </div>
+                    <div id="tab-crude" class="tab-pane" style="display: none; padding: 30px; text-align: center;">
+                        <h3 style="color: #1976d2;">Crude Throughput</h3>
+                        <p style="margin-top: 15px; color: #555;">Current month crude processing statistics.</p>
+                        <div style="margin-top: 20px; font-size: 2rem; color: #4caf50; font-weight: bold;">450.2 TMT</div>
+                    </div>
+                    <div id="tab-dist" class="tab-pane" style="display: none; padding: 30px; text-align: center;">
+                        <h3 style="color: #1976d2;">Distillate Yield</h3>
+                        <p style="margin-top: 15px; color: #555;">High speed diesel and motor spirit yield percentages.</p>
+                        <div style="margin-top: 20px; font-size: 2rem; color: #ff9800; font-weight: bold;">82.5%</div>
+                    </div>
+                    <div id="tab-eii" class="tab-pane" style="display: none; padding: 30px; text-align: center;">
+                        <h3 style="color: #1976d2;">Energy Intensity Index (EII)</h3>
+                        <p style="margin-top: 15px; color: #555;">Real-time energy consumption tracking.</p>
+                        <div style="margin-top: 20px; font-size: 2rem; color: #f44336; font-weight: bold;">98.4</div>
+                    </div>
+                    <div id="tab-grm" class="tab-pane" style="display: none; padding: 30px; text-align: center;">
+                        <h3 style="color: #1976d2;">Gross Refining Margin (GRM)</h3>
+                        <p style="margin-top: 15px; color: #555;">Financial indicators and margins.</p>
+                        <div style="margin-top: 20px; font-size: 2rem; color: #009688; font-weight: bold;">$ 12.5 / bbl</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-events-grid">
+                <div class="card news-card">
+                    <div class="card-header-flex">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-newspaper fa-2x" style="color: #1976d2;"></i>
+                            <h3 style="font-size: 1.1rem; color: #333;">IMPORTANT NEWS</h3>
+                        </div>
+                        <button class="btn-green" onclick="alert('Viewing Important News Details...')">View Details</button>
+                    </div>
+                    <div class="card-content">
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                                <span style="color: #d32f2f; font-weight: bold; font-size: 0.85rem;">[NEW]</span> 
+                                <a href="#" style="text-decoration: none; color: #333; font-size: 0.9rem;">Annual Safety Audit Scheduled for Next Week</a>
+                            </li>
+                            <li style="margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                                <a href="#" style="text-decoration: none; color: #333; font-size: 0.9rem;">Quarterly Townhall meeting link updated</a>
+                            </li>
+                            <li>
+                                <a href="#" style="text-decoration: none; color: #333; font-size: 0.9rem;">New HR policies regarding remote work</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card events-card">
+                    <div class="card-header-flex">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-calendar-alt fa-2x" style="color: #009688;"></i>
+                            <h3 style="font-size: 1.1rem; color: #333;">Upcoming Events</h3>
+                        </div>
+                    </div>
+                    <div class="card-content" style="padding-top: 5px;">
+                        <div class="event-item" style="margin-bottom: 15px;">
+                            <div class="event-desc">
+                                <strong style="color: #1976d2; display: block; margin-bottom: 5px;">Holiday</strong>
+                                <p style="font-size: 0.9rem;">15 Aug 2026 [Independence Day]</p>
+                            </div>
+                            <div class="event-link">
+                                <a href="#" style="color: #1976d2; text-decoration: none; font-size: 0.9rem;">View Monthly Calendar</a>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-desc">
+                                <strong style="color: #333; display: block; margin-bottom: 5px;">Meeting Schedule</strong>
+                                <p style="font-size: 0.9rem; font-weight: 500;">RSM</p>
+                                <p class="text-muted" style="font-size: 0.85rem;">[23 Jun 2026 11:00]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column -->
+        <aside class="right-col">
+            <div class="card special-events-card">
+                <div class="card-header bg-red text-white text-center">
+                    <h3 style="font-size: 1rem; margin: 0;">Special Events</h3>
+                </div>
+                <div class="tabs-small right-tabs">
+                    <button class="tab-small active" data-target="event-birthday">BIRTHDAY</button>
+                    <button class="tab-small" data-target="event-superannuation">SUPER ANNUATION</button>
+                    <button class="tab-small" data-target="event-joining">NEW JOINING</button>
+                </div>
+                
+                <div class="event-content-container">
+                    <div id="event-birthday" class="event-pane active card-content text-center">
+                        <h4 style="color: #1976d2; margin-bottom: 10px; font-size: 0.9rem; font-style: italic;">Upcoming Events:</h4>
+                        <img src="assets/birthday_person.png" alt="Birthday Person" class="circle-img">
+                        <p class="mt-2" style="font-size: 0.9rem;"><strong>Suman, Shashikant Kumar</strong></p>
+                        <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 10px;">EA-VI(ML)</p>
+                        <p style="color: #0d47a1; font-weight: bold;"><i class="fa-solid fa-cake-candles" style="color: #1976d2;"></i> 25-Jun</p>
+                    </div>
+                    
+                    <div id="event-superannuation" class="event-pane card-content text-center" style="display: none;">
+                        <h4 style="color: #f57c00; margin-bottom: 10px; font-size: 0.9rem; font-style: italic;">Farewell:</h4>
+                        <img src="https://via.placeholder.com/80?text=Ramesh" alt="Retiring Person" class="circle-img" style="border-color: #f57c00;">
+                        <p class="mt-2" style="font-size: 0.9rem;"><strong>Ramesh Singh</strong></p>
+                        <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 10px;">Manager (Operations)</p>
+                        <p style="color: #e65100; font-weight: bold;"><i class="fa-solid fa-handshake" style="color: #f57c00;"></i> 30-Jun</p>
+                    </div>
+                    
+                    <div id="event-joining" class="event-pane card-content text-center" style="display: none;">
+                        <h4 style="color: #4caf50; margin-bottom: 10px; font-size: 0.9rem; font-style: italic;">Welcome Aboard:</h4>
+                        <img src="https://via.placeholder.com/80?text=Priya" alt="New Person" class="circle-img" style="border-color: #4caf50;">
+                        <p class="mt-2" style="font-size: 0.9rem;"><strong>Priya Sharma</strong></p>
+                        <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 10px;">Engineer (IT)</p>
+                        <p style="color: #2e7d32; font-weight: bold;"><i class="fa-solid fa-user-plus" style="color: #4caf50;"></i> 20-Jun</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card applications-card">
+                <div class="card-header bg-blue text-white text-center">
+                    <h3 style="font-size: 1rem; margin: 0;">Applications</h3>
+                </div>
+                <div class="card-content" style="position: relative; padding: 15px 30px;">
+                    <button class="app-prev" onclick="moveAppSlide(-1)" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: #d32f2f; z-index: 10;">&#10094;</button>
+                    
+                    <div class="app-slider-wrapper" style="overflow: hidden; width: 100%;">
+                        <div class="app-slides" style="display: flex; transition: transform 0.3s ease-in-out; width: 200%;">
+                            <!-- Slide 1 -->
+                            <div class="app-slide" style="width: 50%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                                <div class="app-icon" onclick="alert('Opening e-Nivida...')">
+                                    <i class="fa-solid fa-file-invoice fa-2x" style="color: #424242;"></i>
+                                    <span>e-Nivida</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Hello IOCian...')">
+                                    <i class="fa-solid fa-phone fa-2x" style="color: #1976d2;"></i>
+                                    <span>Hello IOCian</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Online PPE Portal...')">
+                                    <i class="fa-solid fa-shield-halved fa-2x" style="color: #ff9800;"></i>
+                                    <span>Online PPE Portal</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Gate Pass System...')">
+                                    <i class="fa-solid fa-car fa-2x" style="color: #424242;"></i>
+                                    <span>Vehicle Gate Pass System</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening ESS...')">
+                                    <i class="fa-solid fa-users fa-2x" style="color: #f44336;"></i>
+                                    <span>ESS</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening UAS...')">
+                                    <i class="fa-solid fa-clock fa-2x" style="color: #1976d2;"></i>
+                                    <span>UAS</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="app-slide" style="width: 50%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                                <div class="app-icon" onclick="alert('Opening SAP...')">
+                                    <i class="fa-solid fa-server fa-2x" style="color: #ff9800;"></i>
+                                    <span>SAP ERP</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening LMS...')">
+                                    <i class="fa-solid fa-graduation-cap fa-2x" style="color: #9c27b0;"></i>
+                                    <span>LMS Training</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Webmail...')">
+                                    <i class="fa-solid fa-envelope fa-2x" style="color: #009688;"></i>
+                                    <span>Webmail</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Helpdesk...')">
+                                    <i class="fa-solid fa-headset fa-2x" style="color: #1976d2;"></i>
+                                    <span>IT Helpdesk</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening Township...')">
+                                    <i class="fa-solid fa-building fa-2x" style="color: #4caf50;"></i>
+                                    <span>Township</span>
+                                </div>
+                                <div class="app-icon" onclick="alert('Opening HR...')">
+                                    <i class="fa-solid fa-address-card fa-2x" style="color: #795548;"></i>
+                                    <span>HR Portal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="app-next" onclick="moveAppSlide(1)" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: #d32f2f; z-index: 10;">&#10095;</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

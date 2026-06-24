@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barauni Refinery Intranet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <ul class="top-links">
+                <li><a href="#"><i class="fa-solid fa-building"></i> Township</a></li>
+                <li><a href="#"><i class="fa-solid fa-hospital"></i> Hospital</a></li>
+                <li><a href="#"><i class="fa-solid fa-address-card"></i> HR Dept</a></li>
+                <li><a href="#"><i class="fa-solid fa-headset"></i> IT Helpdesk</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> Webmail</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-section" style="flex: 1; display: flex; align-items: center;">
+                <img src="assets/indian_oil_logo.png" alt="IndianOil Logo" class="main-logo">
+            </div>
+            
+            <div class="site-title" style="flex: 2; text-align: center;">
+                <h1 style="text-transform: uppercase;">Barauni Refinery</h1>
+                <h3 class="subtitle" style="color: #5b7b9e; font-weight: 600; letter-spacing: 1px;"><i class="fa-solid fa-leaf" style="color: #666;"></i> IN HARMONY WITH NATURE <i class="fa-solid fa-leaf" style="color: #666;"></i></h3>
+            </div>
+
+            <div class="right-header" style="flex: 1; text-align: right;">
+                <div class="date-time" id="datetime"></div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i> Barauni, Begusarai<br>Bihar 851114, India
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky Navbar (Megamenu Style) -->
+    <nav class="navbar sticky">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-home"></i></a></li>
+                <li class="dropdown">
+                    <a href="#">Intranet Links <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HR Dept</a></li>
+                        <li><a href="#">IT Helpdesk</a></li>
+                        <li><a href="#">Finance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown megamenu">
+                    <a href="#">Applications <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="megamenu-content">
+                        <div class="mega-col">
+                            <h4>Core Systems</h4>
+                            <ul>
+                                <li><a href="#">ESS</a></li>
+                                <li><a href="#">SAP ERP</a></li>
+                                <li><a href="#">e-Nivida</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Operations</h4>
+                            <ul>
+                                <li><a href="#">UAS</a></li>
+                                <li><a href="#">Vehicle Gate Pass</a></li>
+                                <li><a href="#">Online PPE Portal</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">LMS Training</a></li>
+                                <li><a href="#">Hello IOCian</a></li>
+                                <li><a href="#">Township</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">BR Specific <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Township</a></li>
+                        <li><a href="#">Hospital</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Other Links <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">IOCL Corporate</a></li>
+                        <li><a href="#">Govt. Portals</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">e-FORMS</a></li>
+                <li><a href="#">Quick Links</a></li>
+                <li><a href="#">Manuals</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="slider-container" id="main-slider">
+            <div class="slide active" style="background: url('assets/sprint_slider.png') center/cover no-repeat;">
+            </div>
+            <!-- Extra slide to make it a slider -->
+            <div class="slide" style="background: url('assets/br_gallery.png') center/cover no-repeat;">
+                <div class="slide-overlay">
+                    <h2>BR Gallery</h2>
+                    <p>Building a better tomorrow</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content container">
+        <div class="row">
+            <!-- Left Column: News & Events (like IITD) -->
+            <div class="col-md-8">
+                <!-- Center Tabs -->
+                <div class="tabs-container">
+                    <div class="tab-header" style="overflow-x: auto; white-space: nowrap;">
+                        <button class="tab-btn active" data-target="tab-home">Home</button>
+                        <button class="tab-btn" data-target="tab-grn">GRN (Day)</button>
+                        <button class="tab-btn" data-target="tab-crude">Crude T/Put</button>
+                        <button class="tab-btn" data-target="tab-dist">Dist Yield</button>
+                        <button class="tab-btn" data-target="tab-eii">EII</button>
+                        <button class="tab-btn" data-target="tab-grm">GRM</button>
+                    </div>
+                    <div class="tab-content">
+                        <!-- Home Tab -->
+                        <div id="tab-home" class="tab-pane active">
+                            <div style="text-align: center; padding: 30px;">
+                                <h2 style="color: var(--iitd-primary);">Welcome to Barauni Refinery Intranet</h2>
+                                <p style="color: #666; margin-top: 10px;">Please see the dashboard data and recent updates.</p>
+                            </div>
+                        </div>
+                        <!-- Other Tabs -->
+                        <div id="tab-grn" class="tab-pane" style="text-align: center;">
+                            <h3 style="color: var(--iitd-primary);">GRN (Day) Data</h3>
+                            <p style="margin-top: 15px; color: #555;">Daily production GRN details will be displayed here.</p>
+                            <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                                <tr style="background: #f1f1f1;"><th style="padding: 8px; border: 1px solid #ddd;">Unit</th><th style="padding: 8px; border: 1px solid #ddd;">Target</th><th style="padding: 8px; border: 1px solid #ddd;">Actual</th></tr>
+                                <tr><td style="padding: 8px; border: 1px solid #ddd;">AVU-1</td><td style="padding: 8px; border: 1px solid #ddd;">1500</td><td style="padding: 8px; border: 1px solid #ddd;">1520</td></tr>
+                                <tr><td style="padding: 8px; border: 1px solid #ddd;">AVU-2</td><td style="padding: 8px; border: 1px solid #ddd;">2000</td><td style="padding: 8px; border: 1px solid #ddd;">1980</td></tr>
+                            </table>
+                        </div>
+                        <div id="tab-crude" class="tab-pane" style="text-align: center;">
+                            <h3 style="color: var(--iitd-primary);">Crude Throughput</h3>
+                            <div style="margin-top: 20px; font-size: 2rem; color: #4caf50; font-weight: bold;">450.2 TMT</div>
+                        </div>
+                        <div id="tab-dist" class="tab-pane" style="text-align: center;">
+                            <h3 style="color: var(--iitd-primary);">Distillate Yield</h3>
+                            <div style="margin-top: 20px; font-size: 2rem; color: #ff9800; font-weight: bold;">82.5%</div>
+                        </div>
+                        <div id="tab-eii" class="tab-pane" style="text-align: center;">
+                            <h3 style="color: var(--iitd-primary);">Energy Intensity Index (EII)</h3>
+                            <div style="margin-top: 20px; font-size: 2rem; color: #f44336; font-weight: bold;">98.4</div>
+                        </div>
+                        <div id="tab-grm" class="tab-pane" style="text-align: center;">
+                            <h3 style="color: var(--iitd-primary);">Gross Refining Margin (GRM)</h3>
+                            <div style="margin-top: 20px; font-size: 2rem; color: #009688; font-weight: bold;">$ 12.5 / bbl</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News & Events -->
+                <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 30px;">
+                    <div style="flex: 1;" class="notice-card">
+                        <h4 style="font-size: 18px; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><i class="fa-solid fa-newspaper"></i> IMPORTANT NEWS</h4>
+                        <div style="padding: 5px 0;">
+                            <ul class="news-list">
+                                <li><a href="#">Annual Safety Audit Scheduled for Next Week</a></li>
+                                <li><a href="#">Quarterly Townhall meeting link updated</a></li>
+                                <li><a href="#">New HR policies regarding remote work</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="flex: 1;" class="notice-card">
+                        <h4 style="font-size: 18px; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><i class="fa-solid fa-calendar-alt"></i> UPCOMING EVENTS</h4>
+                        <div style="padding: 5px 0;">
+                            <p style="color: var(--iitd-primary); font-weight: bold;">Holiday</p>
+                            <p style="font-size: 0.9rem;">15 Aug 2026 [Independence Day]</p>
+                            <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                            <p style="font-weight: bold;">Meeting Schedule</p>
+                            <p style="font-size: 0.9rem;">RSM [23 Jun 2026 11:00]</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Full Applications Slider -->
+                <div class="widget applications-card mt-40">
+                    <h3 class="widget-title text-center">Applications</h3>
+                    <div style="position: relative; padding: 20px 40px; background: transparent;">
+                        <button class="app-prev" onclick="moveAppSlide(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: var(--iitd-primary); z-index: 10;">&#10094;</button>
+                        
+                        <div class="app-slider-wrapper" style="overflow: hidden; width: 100%;">
+                            <div class="app-slides" id="app-slides-container" style="display: flex; transition: transform 0.3s ease-in-out; width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="app-slide" style="width: 50%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                                    <div class="app-card" onclick="alert('Opening e-Nivida')"><i class="fa-solid fa-file-invoice"></i><h4>e-Nivida</h4></div>
+                                    <div class="app-card" onclick="alert('Opening Hello IOCian')"><i class="fa-solid fa-phone"></i><h4>Hello IOCian</h4></div>
+                                    <div class="app-card" onclick="alert('Opening ESS')"><i class="fa-solid fa-users"></i><h4>ESS</h4></div>
+                                    <div class="app-card" onclick="alert('Opening Gate Pass')"><i class="fa-solid fa-car"></i><h4>Vehicle Gate Pass</h4></div>
+                                    <div class="app-card" onclick="alert('Opening UAS')"><i class="fa-solid fa-clock"></i><h4>UAS</h4></div>
+                                    <div class="app-card" onclick="alert('Opening PPE')"><i class="fa-solid fa-shield-halved"></i><h4>Online PPE Portal</h4></div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="app-slide" style="width: 50%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                                    <div class="app-card" onclick="alert('Opening SAP')"><i class="fa-solid fa-server"></i><h4>SAP ERP</h4></div>
+                                    <div class="app-card" onclick="alert('Opening LMS')"><i class="fa-solid fa-graduation-cap"></i><h4>LMS Training</h4></div>
+                                    <div class="app-card" onclick="alert('Opening Webmail')"><i class="fa-solid fa-envelope"></i><h4>Webmail</h4></div>
+                                    <div class="app-card" onclick="alert('Opening Helpdesk')"><i class="fa-solid fa-headset"></i><h4>IT Helpdesk</h4></div>
+                                    <div class="app-card" onclick="alert('Opening Township')"><i class="fa-solid fa-building"></i><h4>Township</h4></div>
+                                    <div class="app-card" onclick="alert('Opening HR')"><i class="fa-solid fa-address-card"></i><h4>HR Portal</h4></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="app-next" onclick="moveAppSlide(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: var(--iitd-primary); z-index: 10;">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar (like IITD Director/Notices) -->
+            <div class="col-md-4 sidebar">
+                <!-- 3-Column Grid -->
+                <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 30px;">
+                    <!-- ED Profile -->
+                    <div class="widget profile-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                        <h3 class="widget-title">From the ED</h3>
+                        <div style="flex: 1; display: flex; flex-direction: column;">
+                            <img src="assets/ed_head.png" alt="ED Head" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            <div class="profile-info" style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                                <h4 style="font-size: 18px; margin-bottom: 10px;">ED & Ref Head</h4>
+                                <a href="#" class="read-more" style="color: var(--iitd-primary); font-weight: 600;">Read Message <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BR Gallery -->
+                    <div class="widget gallery-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                        <h3 class="widget-title">BR Gallery</h3>
+                        <div style="flex: 1; display: flex; flex-direction: column;">
+                            <img src="assets/br_gallery.png" alt="Refinery" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            <div style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                                <h4 style="font-size: 18px; margin-bottom: 10px;">Latest Captures</h4>
+                                <a href="#" style="color: var(--iitd-primary); font-weight: 600;">View Full Gallery <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Events (Birthdays, etc) -->
+                    <div class="widget special-events" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                        <h3 class="widget-title">Special Events</h3>
+                        <div class="events-tabs" style="display: flex; border-bottom: 1px solid #eee; margin-bottom: 20px;">
+                            <button class="s-tab-btn active" data-target="birthday" style="flex: 1;">Birthday</button>
+                            <button class="s-tab-btn" data-target="superannuation" style="flex: 1;">Super Annuation</button>
+                            <button class="s-tab-btn" data-target="joining" style="flex: 1;">New Joining</button>
+                        </div>
+                        <div class="s-tab-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                            <div id="birthday" class="s-tab-pane active" style="width: 100%; text-align: center;">
+                                <img src="assets/birthday_person.png" alt="Birthday Person" class="circle-img" style="margin: 0 auto 15px; display: block;">
+                                <h5 style="font-size: 15px; color: var(--iitd-heading); margin-bottom: 5px;">Suman, Shashikant Kumar</h5>
+                                <p class="designation" style="font-size: 13px; color: #666; margin-bottom: 10px;">EA-VI(ML)</p>
+                                <p class="date-highlight" style="color: var(--iitd-primary); font-weight: 700; font-size: 15px;"><i class="fa-solid fa-cake-candles"></i> 25-Jun</p>
+                            </div>
+                            <div id="superannuation" class="s-tab-pane" style="width: 100%; text-align: center;">
+                                <h5 style="color: var(--iitd-primary); margin-top: 20px;">Happy Retirement!</h5>
+                                <p style="color: #666;">To our beloved colleagues retiring this month.</p>
+                            </div>
+                            <div id="joining" class="s-tab-pane" style="width: 100%; text-align: center;">
+                                <h5 style="color: #4caf50; margin-top: 20px;">Welcome Aboard!</h5>
+                                <p style="color: #666;">To all the new members joining Barauni Refinery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column Grid for remaining items -->
+                <div style="display: flex; gap: 20px; align-items: stretch;">
+                    <!-- In This Month -->
+                    <div class="notice-card" style="flex: 1; margin-bottom: 0;">
+                        <h4 style="font-size: 16px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 8px;">In This Month !! Jun-1997</h4>
+                        <div style="padding: 5px 0;">
+                            <p style="font-size: 0.9rem;">Barauni Refinery accredited with ISO-14001</p>
+                        </div>
+                    </div>
+
+                    <!-- Info Block -->
+                    <div class="widget info-widget" style="flex: 1; margin-bottom: 0;">
+                        <h3 class="widget-title">Safety Records</h3>
+                        <ul class="list-unstyled" style="list-style: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>Fire Free Days:</strong> <span style="float: right; background: var(--iitd-primary); color: white; padding: 2px 8px; border-radius: 4px;">2977</span></li>
+                            <li style="padding: 8px 0;"><strong>Accident Free Days:</strong> <span style="float: right; background: var(--iitd-primary); color: white; padding: 2px 8px; border-radius: 4px;">190</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Barauni Refinery, IndianOil Corporation Ltd. All Rights Reserved.</p>
+            <p>Designed in IIT Delhi Format</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
