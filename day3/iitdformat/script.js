@@ -80,3 +80,34 @@ function moveAppSlide(direction) {
     const transformValue = -(currentAppSlide * 50);
     slidesContainer.style.transform = `translateX(${transformValue}%)`;
 }
+
+// Air Pollution (PM2.5) Indicator
+function updateAirPollution() {
+    const heart = document.getElementById('pm25-heart');
+    const valueEl = document.getElementById('pm25-value');
+    if (!heart || !valueEl) return;
+
+    // PM2.5 concentration in µg/m³ (replace with live CERCA feed when available)
+    const pm25 = 38;
+
+    // Air quality bands (CPCB style) -> heart colour + label
+    let color, label;
+    if (pm25 <= 30) {
+        color = '#21c55d'; label = 'Good';            // green
+    } else if (pm25 <= 60) {
+        color = '#a3c61a'; label = 'Satisfactory';    // light green
+    } else if (pm25 <= 90) {
+        color = '#f6c513'; label = 'Moderate';        // yellow
+    } else if (pm25 <= 120) {
+        color = '#f97316'; label = 'Poor';            // orange
+    } else if (pm25 <= 250) {
+        color = '#ef4444'; label = 'Very Poor';       // red
+    } else {
+        color = '#7e22ce'; label = 'Severe';          // purple
+    }
+
+    heart.style.color = color;
+    heart.title = label + ' (PM2.5: ' + pm25 + ' µg/m³)';
+    valueEl.textContent = pm25 + ' µg/m³ · ' + label;
+}
+updateAirPollution();

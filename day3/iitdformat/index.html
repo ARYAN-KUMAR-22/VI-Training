@@ -122,6 +122,62 @@
         <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 
+    <!-- Featured Widgets (below slider) -->
+    <div class="container" style="margin-top: 30px;">
+        <!-- 3-Column Grid -->
+        <div style="display: flex; gap: 20px; align-items: stretch;">
+            <!-- ED Profile -->
+            <div class="widget profile-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                <h3 class="widget-title">From the ED</h3>
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <img src="assets/ed_head.png" alt="ED Head" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                    <div class="profile-info" style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="font-size: 18px; margin-bottom: 10px;">ED & Ref Head</h4>
+                        <a href="#" class="read-more" style="color: var(--iitd-primary); font-weight: 600;">Read Message <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BR Gallery -->
+            <div class="widget gallery-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                <h3 class="widget-title">BR Gallery</h3>
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <img src="assets/br_gallery.png" alt="Refinery" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                    <div style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="font-size: 18px; margin-bottom: 10px;">Latest Captures</h4>
+                        <a href="#" style="color: var(--iitd-primary); font-weight: 600;">View Full Gallery <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Events (Birthdays, etc) -->
+            <div class="widget special-events" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
+                <h3 class="widget-title">Special Events</h3>
+                <div class="events-tabs" style="display: flex; border-bottom: 1px solid #eee; margin-bottom: 20px;">
+                    <button class="s-tab-btn active" data-target="birthday" style="flex: 1;">Birthday</button>
+                    <button class="s-tab-btn" data-target="superannuation" style="flex: 1;">Super Annuation</button>
+                    <button class="s-tab-btn" data-target="joining" style="flex: 1;">New Joining</button>
+                </div>
+                <div class="s-tab-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div id="birthday" class="s-tab-pane active" style="width: 100%; text-align: center;">
+                        <img src="assets/birthday_person.png" alt="Birthday Person" class="circle-img" style="margin: 0 auto 15px; display: block;">
+                        <h5 style="font-size: 15px; color: var(--iitd-heading); margin-bottom: 5px;">Suman, Shashikant Kumar</h5>
+                        <p class="designation" style="font-size: 13px; color: #666; margin-bottom: 10px;">EA-VI(ML)</p>
+                        <p class="date-highlight" style="color: var(--iitd-primary); font-weight: 700; font-size: 15px;"><i class="fa-solid fa-cake-candles"></i> 25-Jun</p>
+                    </div>
+                    <div id="superannuation" class="s-tab-pane" style="width: 100%; text-align: center;">
+                        <h5 style="color: var(--iitd-primary); margin-top: 20px;">Happy Retirement!</h5>
+                        <p style="color: #666;">To our beloved colleagues retiring this month.</p>
+                    </div>
+                    <div id="joining" class="s-tab-pane" style="width: 100%; text-align: center;">
+                        <h5 style="color: #4caf50; margin-top: 20px;">Welcome Aboard!</h5>
+                        <p style="color: #666;">To all the new members joining Barauni Refinery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content Area -->
     <main class="main-content container">
         <div class="row">
@@ -234,59 +290,6 @@
 
             <!-- Right Column: Sidebar (like IITD Director/Notices) -->
             <div class="col-md-4 sidebar">
-                <!-- 3-Column Grid -->
-                <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 30px;">
-                    <!-- ED Profile -->
-                    <div class="widget profile-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
-                        <h3 class="widget-title">From the ED</h3>
-                        <div style="flex: 1; display: flex; flex-direction: column;">
-                            <img src="assets/ed_head.png" alt="ED Head" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-                            <div class="profile-info" style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                                <h4 style="font-size: 18px; margin-bottom: 10px;">ED & Ref Head</h4>
-                                <a href="#" class="read-more" style="color: var(--iitd-primary); font-weight: 600;">Read Message <i class="fa-solid fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BR Gallery -->
-                    <div class="widget gallery-widget" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
-                        <h3 class="widget-title">BR Gallery</h3>
-                        <div style="flex: 1; display: flex; flex-direction: column;">
-                            <img src="assets/br_gallery.png" alt="Refinery" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-                            <div style="text-align: center; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                                <h4 style="font-size: 18px; margin-bottom: 10px;">Latest Captures</h4>
-                                <a href="#" style="color: var(--iitd-primary); font-weight: 600;">View Full Gallery <i class="fa-solid fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Special Events (Birthdays, etc) -->
-                    <div class="widget special-events" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column;">
-                        <h3 class="widget-title">Special Events</h3>
-                        <div class="events-tabs" style="display: flex; border-bottom: 1px solid #eee; margin-bottom: 20px;">
-                            <button class="s-tab-btn active" data-target="birthday" style="flex: 1;">Birthday</button>
-                            <button class="s-tab-btn" data-target="superannuation" style="flex: 1;">Super Annuation</button>
-                            <button class="s-tab-btn" data-target="joining" style="flex: 1;">New Joining</button>
-                        </div>
-                        <div class="s-tab-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                            <div id="birthday" class="s-tab-pane active" style="width: 100%; text-align: center;">
-                                <img src="assets/birthday_person.png" alt="Birthday Person" class="circle-img" style="margin: 0 auto 15px; display: block;">
-                                <h5 style="font-size: 15px; color: var(--iitd-heading); margin-bottom: 5px;">Suman, Shashikant Kumar</h5>
-                                <p class="designation" style="font-size: 13px; color: #666; margin-bottom: 10px;">EA-VI(ML)</p>
-                                <p class="date-highlight" style="color: var(--iitd-primary); font-weight: 700; font-size: 15px;"><i class="fa-solid fa-cake-candles"></i> 25-Jun</p>
-                            </div>
-                            <div id="superannuation" class="s-tab-pane" style="width: 100%; text-align: center;">
-                                <h5 style="color: var(--iitd-primary); margin-top: 20px;">Happy Retirement!</h5>
-                                <p style="color: #666;">To our beloved colleagues retiring this month.</p>
-                            </div>
-                            <div id="joining" class="s-tab-pane" style="width: 100%; text-align: center;">
-                                <h5 style="color: #4caf50; margin-top: 20px;">Welcome Aboard!</h5>
-                                <p style="color: #666;">To all the new members joining Barauni Refinery.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- 2-Column Grid for remaining items -->
                 <div style="display: flex; gap: 20px; align-items: stretch;">
                     <!-- In This Month -->
@@ -313,8 +316,16 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container text-center">
+            <!-- Air Pollution (PM2.5) Indicator -->
+            <div class="air-pollution-box">
+                <div class="air-pollution-content">
+                    <span class="air-pollution-label">Air Pollution (PM2.5) :</span>
+                    <span class="air-pollution-heart" id="pm25-heart"><i class="fa-solid fa-heart"></i></span>
+                    <span class="air-pollution-value" id="pm25-value"></span>
+                </div>
+                <div class="air-pollution-source">Source: <strong>CERCA</strong></div>
+            </div>
             <p>&copy; 2026 Barauni Refinery, IndianOil Corporation Ltd. All Rights Reserved.</p>
-            <p>Designed in IIT Delhi Format</p>
         </div>
     </footer>
 
