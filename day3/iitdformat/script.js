@@ -82,32 +82,57 @@ function moveAppSlide(direction) {
 }
 
 // Air Pollution (PM2.5) Indicator
-function updateAirPollution() {
+// Barauni Refinery, Begusarai, Bihar coordinates
+const BARAUNI_LAT = 25.46;
+const BARAUNI_LON = 86.01;
+
+// Map a PM2.5 concentration (µg/m³, CPCB bands) to a heart colour + label
+function pm25Band(pm25) {
+    if (pm25 <= 30)  return { color: '#21c55d', label: 'Good' };          // green
+    if (pm25 <= 60)  return { color: '#a3c61a', label: 'Satisfactory' };  // light green
+    if (pm25 <= 90)  return { color: '#f6c513', label: 'Moderate' };      // yellow
+    if (pm25 <= 120) return { color: '#f97316', label: 'Poor' };          // orange
+    if (pm25 <= 250) return { color: '#ef4444', label: 'Very Poor' };     // red
+    return { color: '#7e22ce', label: 'Severe' };                         // purple
+}
+
+function renderAirPollution(pm25, isLive) {
     const heart = document.getElementById('pm25-heart');
     const valueEl = document.getElementById('pm25-value');
     if (!heart || !valueEl) return;
 
-    // PM2.5 concentration in µg/m³ (replace with live CERCA feed when available)
-    const pm25 = 38;
+    const rounded = Math.round(pm25);
+    const band = pm25Band(rounded);
 
-    // Air quality bands (CPCB style) -> heart colour + label
-    let color, label;
-    if (pm25 <= 30) {
-        color = '#21c55d'; label = 'Good';            // green
-    } else if (pm25 <= 60) {
-        color = '#a3c61a'; label = 'Satisfactory';    // light green
-    } else if (pm25 <= 90) {
-        color = '#f6c513'; label = 'Moderate';        // yellow
-    } else if (pm25 <= 120) {
-        color = '#f97316'; label = 'Poor';            // orange
-    } else if (pm25 <= 250) {
-        color = '#ef4444'; label = 'Very Poor';       // red
-    } else {
-        color = '#7e22ce'; label = 'Severe';          // purple
-    }
-
-    heart.style.color = color;
-    heart.title = label + ' (PM2.5: ' + pm25 + ' µg/m³)';
-    valueEl.textContent = pm25 + ' µg/m³ · ' + label;
+    heart.style.color = band.color;
+    heart.title = band.label + ' (PM2.5: ' + rounded + ' µg/m³)'
+        + (isLive ? '' : ' — cached value, live data unavailable');
+    valueEl.textContent = rounded + ' µg/m³ · ' + band.label;
 }
+
+// Fetch live PM2.5 from Open-Meteo Air Quality API (free, no API key)
+function updateAirPollution() {
+    const url = 'https://air-quality-api.open-meteo.com/v1/air-quality'
+        + '?latitude=' + BARAUNI_LAT
+        + '&longitude=' + BARAUNI_LON
+        + '&current=pm2_5';
+
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+        })
+        .then(data => {
+            const pm25 = data && data.current && data.current.pm2_5;
+            if (typeof pm25 !== 'number') throw new Error('No PM2.5 in response');
+            renderAirPollution(pm25, true);
+        })
+        .catch(err => {
+            console.warn('Live air quality fetch failed, using fallback:', err);
+            renderAirPollution(38, false); // fallback value
+        });
+}
+
 updateAirPollution();
+// Refresh every 30 minutes (Open-Meteo updates hourly)
+setInterval(updateAirPollution, 30 * 60 * 1000);
