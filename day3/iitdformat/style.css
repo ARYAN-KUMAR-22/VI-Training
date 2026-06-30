@@ -200,10 +200,19 @@ a:hover {
 .megamenu-content.mega-3 { width: 820px; }
 .megamenu-content.mega-4 { width: 1080px; max-width: 95vw; }
 
-/* Align wide menus to the right edge so they don't overflow the viewport */
+/* Small menus near the right edge: align to their item's right edge */
 .dropdown.megamenu.align-right .megamenu-content {
     left: auto;
     right: 0;
+}
+
+/* Wide menus span the whole navbar width so they never overflow the viewport */
+.navbar .container { position: relative; }
+.dropdown.megamenu.wide { position: static; }
+.dropdown.megamenu.wide .megamenu-content {
+    left: 0;
+    right: 0;
+    width: auto;
 }
 .dropdown.megamenu:hover .megamenu-content {
     display: flex;
@@ -223,6 +232,9 @@ a:hover {
     font-size: 17px;
     font-weight: 700;
     text-transform: none;
+}
+.mega-col h4.heading-dark {
+    color: #333333;               /* dark heading (e.g. Applications) */
 }
 .mega-col ul {
     list-style: none;
