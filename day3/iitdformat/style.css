@@ -189,38 +189,54 @@ a:hover {
     left: 0;
     width: 700px;
     background: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     z-index: 100;
     border-top: 3px solid var(--iitd-primary);
-    padding: 25px;
+    padding: 25px 30px;
+}
+/* Column-count width variants */
+.megamenu-content.mega-1 { width: 280px; }
+.megamenu-content.mega-2 { width: 520px; }
+.megamenu-content.mega-3 { width: 820px; }
+.megamenu-content.mega-4 { width: 1080px; max-width: 95vw; }
+
+/* Align wide menus to the right edge so they don't overflow the viewport */
+.dropdown.megamenu.align-right .megamenu-content {
+    left: auto;
+    right: 0;
 }
 .dropdown.megamenu:hover .megamenu-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
 }
 .mega-col {
     flex: 1;
-    padding: 0 15px;
+    min-width: 0;
+    padding: 0 10px;
 }
 .mega-col h4 {
-    color: var(--iitd-primary);
-    border-bottom: 1px solid #eee;
-    padding-bottom: 12px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
+    color: #E8540F;               /* orange section heading */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: none;
 }
 .mega-col ul {
     list-style: none;
 }
 .mega-col ul li a {
     display: block;
-    padding: 8px 0;
-    color: var(--iitd-text);
+    padding: 9px 0;
+    color: #1A3C7A;               /* navy blue links */
     font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
 }
 .mega-col ul li a:hover {
-    color: var(--iitd-primary);
+    color: #E8540F;
     transform: translateX(5px);
 }
 
